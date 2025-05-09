@@ -155,7 +155,7 @@ next_button.addEventListener('click', function () {
 
   if (score >= 80) {
     typeText("Молодець, ти гарно склав екзамен, можеш приступати до наступного екзамену.", talkingText[0], 30, function () {
-      window.location.href = "../../../crystal_exam/crystal.html";
+      window.location.href = "/fantasy_hackathon2025/crystal_exam/crystal.html";
     });
   } else {
     typeText("Щоб перейти до наступного рівня потрібно здати екзамен більше ніж 80%.", talkingText[0], 30);
