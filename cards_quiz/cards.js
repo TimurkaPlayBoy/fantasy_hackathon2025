@@ -94,7 +94,7 @@ function showFinalMessage() {
 
 function nextPage(){
   setTimeout(() => {
-    window.location.href = '/fantasy_hackathon2025/cards_quiz/cards.html';
+    window.location.href = '/fantasy_hackathon2025/Hakaton_main/main.html';
   }, 24000);
 }
 
