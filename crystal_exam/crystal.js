@@ -61,5 +61,5 @@ crystal.addEventListener('click', function() {
 
 // Обробка кнопки переходу
 nextBtn.addEventListener('click', function() {
-  window.location.href = 'https://timurkaplayboy.github.io/fantasy_hackathon2025/crystal_exam/crystal.html';
+  window.location.href = '/fantasy_hackathon2025/crystal_exam/crystal.html';
 });
