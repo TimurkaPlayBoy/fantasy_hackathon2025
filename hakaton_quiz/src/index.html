@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Harry Potter Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/logo1.png" type="image/png">
+
+</head>
+<body>
+  <img src="" id="custom-cursor" />
+  <div class="container start">
+    <div class="hat-wrapper">
+      <img class="hat" src="img/Шляпа.png" alt="Шляпа" />
+      <div class="speech-bubble">
+        <span id="talking-text"></span>
+      </div>
+    </div>
+    <div class="start-btn">Пройти екзамен</div>
+    <div class="restart-btn" style="display: none;">Перездати екзамен</div>
+    <div class="next-btn" style="display: none;">Перейти до наступного екзамену</div>
+  </div>
+
+  <div class="container main">
+    <div class="hat-wrapper">
+      <img class="hat" src="img/Шляпа.png" alt="Шляпа" />
+      <div class="speech-bubble">
+        <span id="talking-text"></span>
+      </div>
+    </div>
+    <div class="ans-row">
+      <div class="answer"></div>
+      <div class="answer"></div>
+    </div>
+    <div class="ans-row">
+      <div class="answer"></div>
+      <div class="answer"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

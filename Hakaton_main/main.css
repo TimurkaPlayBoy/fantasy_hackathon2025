@@ -1,0 +1,517 @@
+/* Загальні стилі */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.video-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.logo img {
+  width: 35em;
+  height: 30em;
+}
+
+.castle_content {
+  min-height: 100vh;
+  background-image: url(src/img/section2_img.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.letter {
+  width: 27em;
+  height: 42em;
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.owl {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 15em;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+  position: relative;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(168, 163, 163);
+  padding: 30px;
+  width: 30%;
+  color: #ccc;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.box.goal {
+  margin-top: 320px;
+}
+
+.box.challenges {
+  margin-top: 650px;
+}
+
+.box h2 {
+  color: #ffcc00;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.box p {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'MedievalSharp', cursive;
+}
+
+/* Підключення Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=MedievalSharp&display=swap');
+
+.hat_content {
+  min-height: 100vh;
+  background-image: url(src/img/hat_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-container {
+  width: 80%;
+  height: 700px;
+  background: rgba(153, 141, 141, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(153, 141, 141, 0.74);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hat-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hat {
+  width: 450px;
+  height: 500px;
+  z-index: 2;
+  margin-bottom: 200px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.crystal {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.crystal img {
+  width: 250px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.crystal:hover img {
+  transform: scale(1.2);
+}
+
+.crystal_gryffindor:hover img {
+  filter: drop-shadow(0 0 15px rgba(174, 0, 1, 0.8));
+}
+
+.crystal_slytherin:hover img {
+  filter: drop-shadow(0 0 15px rgba(0, 85, 39, 0.8));
+}
+
+.crystal_ravenclaw:hover img {
+  filter: drop-shadow(0 0 15px rgba(0, 66, 128, 0.8));
+}
+
+.crystal_gryffindor {
+  top: 50%;
+  left: -105px;
+  transform: translateY(-50%);
+}
+
+.crystal_slytherin {
+  top: 50%;
+  right: -105px;
+  transform: translateY(-50%);
+}
+
+.crystal_ravenclaw {
+  bottom: -105px;
+  left: 35%;
+  transform: translateX(-50%);
+}
+
+.speech-bubble {
+  position: absolute;
+  top: 0px;
+  right: -120px;
+  width: 320px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  display: none;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.85);
+}
+
+
+
+
+
+
+
+
+/* Стилі для логотипа */
+.logo img {
+  width: 35em;
+  height: 30em;
+}
+
+@media (max-width: 1024px) {
+  .logo img {
+    width: 25em;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 18em;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 14em;
+  }
+}
+
+
+/* Стилі для .castle_content */
+.castle_content {
+  min-height: 100vh;
+  background-image: url(src/img/section2_img.jpg);
+  background-size: cover;
+  position: relative;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .castle_content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .castle_content {
+    padding: 20px 10px;
+  }
+
+}
+
+/* Стилі для .letter */
+.letter {
+  width: 27em;
+  height: 42em;
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .letter {
+    width: 50px;
+    height: auto;
+    top: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .letter {
+    width: 18em;
+    height: auto;
+  }
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(168, 163, 163);
+  padding: 30px;
+  color: #ccc;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  margin-top: 20px;
+  width: 30%;
+}
+
+@media (max-width: 1024px) {
+  .box {
+    width: 80%;
+    margin-top: 10px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    padding: 15px;
+    margin-right: 8px;
+  }
+
+  .box h2 {
+    font-size: 22px;
+  }
+
+  .box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .box h2 {
+    font-size: 18px;
+  }
+
+  .box p {
+    font-size: 12px;
+  }
+}
+
+/* Стилі для .owl */
+.owl {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 15em;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .owl {
+    width: 10em;
+    left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .owl {
+    width: 8em;
+  }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+  .hat_content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hat_content {
+    padding: 20px 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hat {
+    margin-top: -250px;
+    margin-left: -40px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .speech-bubble {
+    margin-bottom: 490px;
+    margin-left: 100px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .glass-container {
+    height: auto;
+    padding: 30px 10px;
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hat {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hat {
+    width: 250px;
+    height: auto;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .speech-bubble {
+    width: 50%;
+    right: auto;
+    left: 10%;
+    top: auto;
+    bottom: -50px;
+    margin-top: -1200px;
+  }
+
+  .speech-bubble::after {
+    left: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .speech-bubble {
+    font-size: 14px;
+
+
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .hat-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .gryffindor_img {
+    margin-top: -300px;
+    margin-left: 80px;
+  }
+
+  .slytherin_img {
+    margin-top: -300px;
+    margin-left: -215px;
+  }
+
+  .ravenclaw_img {
+    margin-bottom: 100px;
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .crystal img {
+    width: 140px;
+    height: 140px;
+    margin-top: 40px;
+  }
+}

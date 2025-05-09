@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  background-image: url(img/crystal_bg.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hat-wrapper {
+  position: relative;
+  display: inline-block;
+  transition: opacity 1s ease;
+}
+
+.hat {
+  width: 450px;
+  height: 450px;
+  margin-top: 2em;
+  margin-bottom: -2em;
+}
+
+.speech-bubble {
+  font-family: 'Cinzel', serif;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff8dc;
+  border: 2px solid #6b4f27;
+  border-radius: 20px;
+  padding: 15px 20px;
+  width: 340px;
+  font-size: 1.1em;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  text-align: left;
+  line-height: 1.4;
+  animation: speechBubbleAnim 0.5s ease-out;
+}
+
+@keyframes speechBubbleAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+#talking-text {
+  display: block;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  overflow: hidden;
+  white-space: normal;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.crystal {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: 150px;
+  height: 240px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease, transform 1s ease;
+  filter: brightness(0.8);
+  z-index: 5;
+}
+
+.crystal.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1.1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 5px #6ef3f3);
+  }
+  50% {
+    filter: brightness(1.5) drop-shadow(0 0 20px #00f7ff);
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 0 5px #6ef3f3);
+  }
+}
+#next-btn {
+    margin-top: 60px; /* більше відступу вниз */
+    padding: 12px 28px;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    background-color: #f8f4ec;
+    border: 2px solid #6b4f27;
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.3s ease, background 0.3s ease;
+  }
+  
+  #next-btn:hover {
+    background-color: #e0d4b7;
+    transform: scale(1.05);
+  }
+  
+  #next-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  

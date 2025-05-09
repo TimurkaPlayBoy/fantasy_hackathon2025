@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fantasy_hackathon</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="main.js" defer></script>
+  <link rel="icon" href="src/img/logo1.png" type="image/png">
+
+</head>
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="src/mp3/orchestra-fantasy-111168_mKDQqBU2.mp3" type="audio/mp3">
+    Ваш браузер не підтримує audio тег.
+  </audio>
+
+  <div class="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="src/img/main_gif.mp4" type="video/mp4" />
+      Тег video не підтримується вашим браузером.
+    </video>
+  </div>
+
+  <div class="logo">
+    <img src="src/img/logo.jpg" alt="Logo" />
+  </div>
+
+  <div class="castle_content">
+    <img class="letter" src="src/img/letter.png" alt="" />
+    <div class="first_card"></div>
+    <div class="second_card"></div>
+    <div class="container">
+      <div class="box goal">
+        <h2>Мета</h2>
+        <p>
+        Твоя подорож щойно почалась, юний чарівнику!<br>
+        Мета — довести, що ти справжній маг, гідний носити мантію учня Гоґвортсу.<br><br>
+        Виконавши усі квести, ти отримаєш свій перший магічний пергамент та розкриєш таємницю свого факультету.<br>
+        Попереду — випробування, де перевіряється розум, сміливість, відданість та кмітливість. Обирай мудро!
+        </p>
+      </div>
+      <div class="box challenges">
+        <h2>Завдання</h2>
+        <p>
+        Тебе чекає чотири чарівних квести:<br><br>
+        🧩 Знайди кристал у темному лісі — але обережно, там ховається дещо небезпечне...<br>
+        🖼 Відшукай усіх викладачів — під зображеннями ховаються загадки та пастки!<br>
+        🧠 Пройди магічне опитування — покажи, що ти знаєш про світ чарів!<br>
+        🎓 І найголовніше: зберись духом — чарівний капелюх вже чекає на своє рішення...
+        </p>
+      </div>
+    </div>
+    <img class="owl" src="src/img/owl_castle.jpg" alt="" />
+  </div>
+
+  <div class="hat_content">
+    <div class="glass-container">
+      <div class="hat-wrapper">
+        <img src="src/img/hat.png" alt="Sorting Hat" class="hat" />
+
+        <div class="speech-bubble" id="speech-bubble"></div>
+
+        <div class="crystal-wrapper">
+          <a href="../hakaton_quiz/src/index.html" class="crystal crystal_gryffindor">
+            <img class="gryffindor_img" src="src/img/Gryffindor.jpg" alt="Gryffindor" />
+          </a>
+          <a href="#" class="crystal crystal_slytherin" id="slytherin">
+            <img class="slytherin_img" src="src/img/Slytherin.jpg" alt="Slytherin" />
+          </a>
+          <a href="#" class="crystal crystal_ravenclaw" id="ravenclaw">
+            <img class="ravenclaw_img" src="src/img/Ravenclaw.jpg" alt="Ravenclaw" />
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
